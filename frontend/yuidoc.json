@@ -1,0 +1,12 @@
+{
+  "name": "frontend",
+  "description": "Small description for frontend goes here",
+  "version": "0.0.0",
+  "options": {
+    "paths": [
+      "app"
+    ],
+    "exclude": "vendor",
+    "outdir": "docs"
+  }
+}

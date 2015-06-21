@@ -1,0 +1,49 @@
+<article id="lead">
+    <h1>New Lead</h1>
+
+    {{#if this.showError}}
+        <div class="error">
+            Leads must have first and last name filled in.
+        </div>
+    {{/if}}
+
+    <form>
+        <fieldset>
+            <dl>
+                    <dt>
+                        <label>First Name:</label>
+                    </dt>
+                    <dt>
+                        {{input type="text" value=this.fields.first_name}}
+                    </dt>
+            </dl>
+            <dl>
+                    <dt>
+                        <label>Last Name:</label>
+                    </dt>
+                    <dt>
+                        {{input type="text" value=this.fields.last_name}}
+                    </dt>
+            </dl>
+            <dl>
+                    <dt>
+                        <label>Email:</label>
+                    </dt>
+                    <dt>
+                        {{input type="text" value=this.fields.email}}
+                    </dt>
+            </dl>
+            <dl>
+                    <dt>
+                        <label>Phone:</label>
+                    </dt>
+                    <dt>
+                        {{input type="text" value=fields.phone}}
+                    </dt>
+            </dl>
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="Create Lead" {{action "createLead"}}>
+        </fieldset>
+    </form>
+</article>

@@ -1,0 +1,12 @@
+<article id="leads">
+    <h1>Leads</h1>
+    {{link-to 'New Lead' 'leads.new'}}
+    {{input type="text" value=this.search placeholder="search" className="search"}}
+    <ul>
+        {{#each lead in leads}}
+            {{link-to lead.fullName 'lead.index' lead tagName="li"}}
+        {{/each}}
+    </ul>
+</article>
+
+{{outlet}}
